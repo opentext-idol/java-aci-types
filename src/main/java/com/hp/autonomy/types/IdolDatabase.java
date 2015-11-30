@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Interface for Idol Database information. Implementations expected to be POJOs.
  */
-public interface IdolDatabase extends Serializable, Identifier {
+public interface IdolDatabase extends Serializable {
     /**
      * Database / Index name
      *
