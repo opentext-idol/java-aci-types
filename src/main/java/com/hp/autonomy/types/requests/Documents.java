@@ -36,16 +36,36 @@ public class Documents<T extends Serializable> implements Serializable {
      */
     private final String expandedQuery;
 
+    /**
+     * @return The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
+     * parameter is set to suggest.
+     * @serial The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
+     * parameter is set to suggest.
+     */
+    private final Spelling suggestion;
+
+    /**
+     * @return The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
+     * parameter is set to auto_correction.
+     * @serial The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
+     * parameter is set to auto_correction.
+     */
+    private final Spelling autoCorrection;
+
     // We can't use a builder here because Jackson doesn't support Builders with generic types
     // https://github.com/FasterXML/jackson-databind/issues/921
     public Documents(
             @JsonProperty("documents") final List<T> documents,
             @JsonProperty("totalhits") final Integer totalResults,
-            @JsonProperty("expandedQuery") final String expandedQuery
+            @JsonProperty("expandedQuery") final String expandedQuery,
+            @JsonProperty("suggestion") final Spelling suggestion,
+            @JsonProperty("auto_correction") final Spelling autoCorrection
     ) {
         this.documents = new ArrayList<>(documents);
         this.totalResults = totalResults;
         this.expandedQuery = expandedQuery;
+        this.suggestion = suggestion;
+        this.autoCorrection = autoCorrection;
     }
 
 }
