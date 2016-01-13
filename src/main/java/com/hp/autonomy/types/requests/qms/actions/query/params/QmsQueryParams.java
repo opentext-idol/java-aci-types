@@ -3,12 +3,12 @@
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
  */
 
-package com.hp.autonomy.types.requests.qms;
+package com.hp.autonomy.types.requests.qms.actions.query.params;
 
 /**
- * QMS-specific action parameters that can be added to actions
+ * QMS-specific query action parameters.
  */
-public enum QmsActionParams {
+public enum QmsQueryParams {
     Blacklist,
     Cook,
     CookerContext,
@@ -25,8 +25,8 @@ public enum QmsActionParams {
     Username,
     Whitelist;
 
-    public static QmsActionParams fromValue(final String value) {
-        for (final QmsActionParams queryParam : values()) {
+    public static QmsQueryParams fromValue(final String value) {
+        for (final QmsQueryParams queryParam : values()) {
             if (queryParam.name().equalsIgnoreCase(value)) {
                 return queryParam;
             }
