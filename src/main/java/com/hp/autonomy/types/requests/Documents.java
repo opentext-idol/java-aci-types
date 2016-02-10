@@ -15,6 +15,7 @@ import java.util.List;
 /**
  * Top level response from the QueryTextIndex API and FindSimilar API.
  */
+@SuppressWarnings("InstanceVariableOfConcreteClass")
 @Data
 public class Documents<T extends Serializable> implements Serializable {
 
@@ -52,6 +53,12 @@ public class Documents<T extends Serializable> implements Serializable {
      */
     private final Spelling autoCorrection;
 
+    /**
+     * @return Warnings returned alongside IDOL/Hod responses.
+     * @serial Warnings returned alongside IDOL/Hod responses.
+     */
+    private final Warnings warnings;
+
     // We can't use a builder here because Jackson doesn't support Builders with generic types
     // https://github.com/FasterXML/jackson-databind/issues/921
     public Documents(
@@ -59,13 +66,15 @@ public class Documents<T extends Serializable> implements Serializable {
             @JsonProperty("totalhits") final Integer totalResults,
             @JsonProperty("expandedQuery") final String expandedQuery,
             @JsonProperty("suggestion") final Spelling suggestion,
-            @JsonProperty("auto_correction") final Spelling autoCorrection
+            @JsonProperty("auto_correction") final Spelling autoCorrection,
+            @JsonProperty("warnings") final Warnings warnings
     ) {
         this.documents = new ArrayList<>(documents);
         this.totalResults = totalResults;
         this.expandedQuery = expandedQuery;
         this.suggestion = suggestion;
         this.autoCorrection = autoCorrection;
+        this.warnings = warnings;
     }
 
 }
