@@ -8,10 +8,12 @@ package com.hp.autonomy.types.requests;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Data
-public class Spelling {
+public class Spelling implements Serializable {
+    private static final long serialVersionUID = -3759977893073373750L;
 
     private final List<String> corrections;
     private final String correctedQuery;
