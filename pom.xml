@@ -43,6 +43,12 @@
             <organization>Hewlett-Packard Enterprise</organization>
             <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>
+        <developer>
+            <name>Alex Scown</name>
+            <email>alex.scown@hpe.com</email>
+            <organization>Hewlett-Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
+        </developer>
     </developers>
 
     <properties>
