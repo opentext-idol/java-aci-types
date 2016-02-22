@@ -12,7 +12,7 @@
 
     <groupId>com.hp.autonomy.frontend</groupId>
     <artifactId>aci-types</artifactId>
-    <version>0.8.0</version>
+    <version>0.9.0</version>
 
     <name>Java ACI Types</name>
     <description>Java Client for simple Java types and interfaces common to both Haven-on-Demand and On-Premise Applications</description>
@@ -40,6 +40,12 @@
         <developer>
             <name>Ivo Miller</name>
             <email>ivo.miller@hpe.com</email>
+            <organization>Hewlett-Packard Enterprise</organization>
+            <organizationUrl>http://www.hpe.com</organizationUrl>
+        </developer>
+        <developer>
+            <name>Alex Scown</name>
+            <email>alex.scown@hpe.com</email>
             <organization>Hewlett-Packard Enterprise</organization>
             <organizationUrl>http://www.hpe.com</organizationUrl>
         </developer>

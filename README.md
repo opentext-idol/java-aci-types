@@ -2,9 +2,7 @@
 
 Java Client for simple Java types and interfaces common to both Haven-on-Demand and On-Premise Applications.
 
-Information can be found on the project homepage [here](http://hpautonomy.github.io/java-aci-types)
-
-[![Build Status](https://travis-ci.org/hpautonomy/java-aci-types.svg?branch=master)](https://travis-ci.org/hpautonomy/java-aci-types)
+[![Build Status](https://travis-ci.org/hpe-idol/java-aci-types.svg?branch=master)](https://travis-ci.org/hpe-idol/java-aci-types)
 
 ## Usage
 
