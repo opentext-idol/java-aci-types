@@ -8,9 +8,11 @@ package com.hp.autonomy.types.requests.idol.actions.tags.params;
 /**
  * FieldType parameter values
  */
+@SuppressWarnings({"WeakerAccess", "unused"})
 public enum FieldTypeParam {
     ACL,
     All,
+    AutnRank,
     BitField,
     DataBase,
     Date,
