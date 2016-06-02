@@ -22,6 +22,7 @@ import java.util.List;
 public class RangeInfo implements Serializable {
     private static final long serialVersionUID = -850842200269239270L;
 
+    private final String id;
     private final String name;
     private final int count;
     private final double min;
@@ -31,12 +32,14 @@ public class RangeInfo implements Serializable {
 
     @SuppressWarnings("ConstructorWithTooManyParameters")
     @JsonCreator
-    public RangeInfo(@JsonProperty final String name,
+    public RangeInfo(@JsonProperty final String id,
+                     @JsonProperty final String name,
                      @JsonProperty final int count,
                      @JsonProperty final double min,
                      @JsonProperty final double max,
                      @JsonProperty final double bucketSize,
                      @JsonProperty final List<Value> values) {
+        this.id = id;
         this.name = name;
         this.count = count;
         this.max = max;

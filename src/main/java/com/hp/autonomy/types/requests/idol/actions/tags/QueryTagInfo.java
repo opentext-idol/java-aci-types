@@ -17,10 +17,12 @@ import java.util.Set;
 @Data
 public class QueryTagInfo implements Serializable {
     private static final long serialVersionUID = 7511499868253213698L;
+    private final String id;
     private final String name;
     private final Set<QueryTagCountInfo> values;
 
-    public QueryTagInfo(final String name, final Set<QueryTagCountInfo> values) {
+    public QueryTagInfo(final String id, final String name, final Set<QueryTagCountInfo> values) {
+        this.id = id;
         this.name = name;
         this.values = new LinkedHashSet<>(values);
     }
