@@ -5,8 +5,6 @@
 
 package com.hp.autonomy.types.requests.idol.actions.tags;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
@@ -31,16 +29,14 @@ public class RangeInfo implements Serializable {
     private final List<Value> values;
 
     @SuppressWarnings("ConstructorWithTooManyParameters")
-    @JsonCreator
-    public RangeInfo(@JsonProperty final String id,
-                     @JsonProperty final String name,
-                     @JsonProperty final int count,
-                     @JsonProperty final double min,
-                     @JsonProperty final double max,
-                     @JsonProperty final double bucketSize,
-                     @JsonProperty final List<Value> values) {
-        this.id = id;
-        this.name = name;
+    public RangeInfo(final TagName tagName,
+                     final int count,
+                     final double min,
+                     final double max,
+                     final double bucketSize,
+                     final List<Value> values) {
+        id = tagName.getId();
+        name = tagName.getName();
         this.count = count;
         this.max = max;
         this.min = min;
@@ -58,10 +54,9 @@ public class RangeInfo implements Serializable {
         private final double min;
         private final double max;
 
-        @JsonCreator
-        public Value(@JsonProperty final int count,
-                     @JsonProperty final double min,
-                     @JsonProperty final double max) {
+        public Value(final int count,
+                     final double min,
+                     final double max) {
             this.count = count;
             this.min = min;
             this.max = max;
