@@ -14,6 +14,7 @@ import java.util.Set;
 /**
  * Value/Count information for a single element in a simple QueryTagResponse
  */
+@SuppressWarnings("unused")
 @Data
 public class QueryTagInfo implements Serializable {
     private static final long serialVersionUID = 7511499868253213698L;
@@ -21,9 +22,9 @@ public class QueryTagInfo implements Serializable {
     private final String name;
     private final Set<QueryTagCountInfo> values;
 
-    public QueryTagInfo(final String id, final String name, final Set<QueryTagCountInfo> values) {
-        this.id = id;
-        this.name = name;
+    public QueryTagInfo(final TagName tagName, final Set<QueryTagCountInfo> values) {
+        id = tagName.getId();
+        name = tagName.getName();
         this.values = new LinkedHashSet<>(values);
     }
 }
