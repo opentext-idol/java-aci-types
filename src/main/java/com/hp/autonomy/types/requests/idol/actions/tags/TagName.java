@@ -10,11 +10,14 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @SuppressWarnings({"WeakerAccess", "unused"})
 @Getter
 @NoArgsConstructor
 @EqualsAndHashCode
-public class TagName {
+public class TagName implements Serializable{
+    private static final long serialVersionUID = -6221132711228529797L;
     private String id;
     private String name;
 
