@@ -14,6 +14,7 @@ public class ValueDetails {
     private final double max;
     private final double average;
     private final double sum;
+    private final int totalValues;
 
     @Setter
     @Accessors(chain = true)
@@ -23,16 +24,18 @@ public class ValueDetails {
         private double max;
         private double average;
         private double sum;
+        private int totalValues;
 
         public Builder (final ValueDetails valueDetails) {
             min = valueDetails.min;
             max = valueDetails.max;
             average = valueDetails.average;
             sum = valueDetails.sum;
+            totalValues = valueDetails.totalValues;
         }
 
         public ValueDetails build() {
-            return new ValueDetails(min, max, average, sum);
+            return new ValueDetails(min, max, average, sum, totalValues);
         }
     }
 }
