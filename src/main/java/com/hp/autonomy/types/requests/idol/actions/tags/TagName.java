@@ -16,8 +16,8 @@ public class TagName implements Serializable {
     private final String id;
     private final String name;
 
-    public TagName(final String name, final String path) {
+    public TagName(final String name, final String id) {
         this.name = name;
-        this.id = path;
+        this.id = id;
     }
 }
