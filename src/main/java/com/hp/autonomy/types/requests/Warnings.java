@@ -20,7 +20,6 @@ public class Warnings implements Serializable {
     private static final long serialVersionUID = -1591490695879653571L;
 
     /**
-     * @return The list of databases sent in the query request which do not exist.
      * @serial The list of databases sent in the query request which do not exist.
      */
     private Set<? extends Serializable> invalidDatabases;
