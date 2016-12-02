@@ -38,7 +38,6 @@ public class Documents<T extends Serializable> implements Serializable {
     private final String expandedQuery;
 
     /**
-     * @return The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
      * parameter is set to suggest.
      * @serial The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
      * parameter is set to suggest.
@@ -46,7 +45,6 @@ public class Documents<T extends Serializable> implements Serializable {
     private final Spelling suggestion;
 
     /**
-     * @return The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
      * parameter is set to auto_correction.
      * @serial The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
      * parameter is set to auto_correction.
@@ -54,7 +52,6 @@ public class Documents<T extends Serializable> implements Serializable {
     private final Spelling autoCorrection;
 
     /**
-     * @return Warnings returned alongside IDOL/Hod responses.
      * @serial Warnings returned alongside IDOL/Hod responses.
      */
     private final Warnings warnings;

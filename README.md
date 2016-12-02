@@ -11,7 +11,7 @@ java-aci-types is available from the central Maven repository.
     <dependency>
         <groupId>com.hp.autonomy.frontend</groupId>
         <artifactId>aci-types</artifactId>
-        <version>0.14.1</version>
+        <version>0.15.0</version>
     </dependency>
 
 ## License
