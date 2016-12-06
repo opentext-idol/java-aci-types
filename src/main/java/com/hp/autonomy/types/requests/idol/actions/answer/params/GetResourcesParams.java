@@ -7,6 +7,7 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum GetResourcesParams {
+    ExcludedIds,
     Filter,
     FirstResult,
     Ids,
