@@ -6,15 +6,11 @@
 package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
-public enum AskParams {
-    MaxResults,
-    MinScore,
-    Sort,
-    SystemNames,
-    Text;
+public enum GetStatusParams {
+    SystemInfo;
 
-    public static AskParams fromValue(final String value) {
-        for (final AskParams param : values()) {
+    public static GetStatusParams fromValue(final String value) {
+        for (final GetStatusParams param : values()) {
             if (param.name().equalsIgnoreCase(value)) {
                 return param;
             }

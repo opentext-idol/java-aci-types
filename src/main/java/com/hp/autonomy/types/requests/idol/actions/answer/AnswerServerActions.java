@@ -11,7 +11,8 @@ public enum AnswerServerActions {
     GetResources,
     GetStats,
     GetStatus,
-    ManageResources;
+    ManageResources,
+    TestRule;
 
     public static AnswerServerActions fromValue(final String value) {
         for (final AnswerServerActions action : values()) {
