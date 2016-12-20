@@ -6,17 +6,18 @@
 package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
-public enum SortParam {
+public enum GetResourcesSortParam {
     ID("id"),
     CREATED_TIME("createdTime"),
+    METADATA("metadata"),
     MODIFIED_TIME("modifiedTime"),
-    STATUS("status"),
+    POPULARITY("popularity"),
     RANDOM("random"),
-    METADATA("metadata");
+    STATUS("status");
 
     private final String value;
 
-    SortParam(final String value) {
+    GetResourcesSortParam(final String value) {
         this.value = value;
     }
 
