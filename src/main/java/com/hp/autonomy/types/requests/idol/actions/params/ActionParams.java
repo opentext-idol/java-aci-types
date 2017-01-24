@@ -8,7 +8,9 @@ package com.hp.autonomy.types.requests.idol.actions.params;
 /**
  * Generic Action Params
  */
+@SuppressWarnings("WeakerAccess")
 public enum ActionParams {
+    Action,
     ActionID,
     FileName,
     ForceTemplateRefresh,
@@ -24,6 +26,10 @@ public enum ActionParams {
             if (queryParam.name().equalsIgnoreCase(value)) {
                 return queryParam;
             }
+        }
+
+        if ("a".equalsIgnoreCase(value)) {
+            return Action;
         }
 
         throw new IllegalArgumentException("Unknown query param " + value);
