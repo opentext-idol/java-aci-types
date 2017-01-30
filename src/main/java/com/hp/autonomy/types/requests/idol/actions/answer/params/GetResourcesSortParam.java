@@ -8,9 +8,10 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum GetResourcesSortParam {
     ID("id"),
-    CREATED_TIME("createdTime"),
+    CREATED_TIME("created_time"),
+    LIKELIHOOD("likelihood"),
     METADATA("metadata"),
-    MODIFIED_TIME("modifiedTime"),
+    MODIFIED_TIME("modified_time"),
     POPULARITY("popularity"),
     RANDOM("random"),
     STATUS("status");
