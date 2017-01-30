@@ -7,22 +7,12 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum ManageResourcesParams {
-    Data("data"),
-    SystemName("system_name");
-
-    private final String value;
-
-    ManageResourcesParams(final String v) {
-        value = v;
-    }
-
-    public String value() {
-        return value;
-    }
+    Data,
+    SystemName;
 
     public static ManageResourcesParams fromValue(final String value) {
         for (final ManageResourcesParams param : values()) {
-            if (param.value().equalsIgnoreCase(value)) {
+            if (param.name().equalsIgnoreCase(value)) {
                 return param;
             }
         }

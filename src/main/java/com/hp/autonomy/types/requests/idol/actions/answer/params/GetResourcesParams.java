@@ -7,28 +7,18 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum GetResourcesParams {
-    ExcludedIds("excluded_ids"),
-    Filter("filter"),
-    FirstResult("first_result"),
-    Ids("ids"),
-    MaxResults("max_results"),
-    Sort("sort"),
-    SystemName("system_name"),
-    Type("type");
-
-    private final String value;
-
-    GetResourcesParams(final String v) {
-        value = v;
-    }
-
-    public String value() {
-        return value;
-    }
+    ExcludedIds,
+    Filter,
+    FirstResult,
+    Ids,
+    MaxResults,
+    Sort,
+    SystemName,
+    Type;
 
     public static GetResourcesParams fromValue(final String value) {
         for (final GetResourcesParams param : values()) {
-            if (param.value().equalsIgnoreCase(value)) {
+            if (param.name().equalsIgnoreCase(value)) {
                 return param;
             }
         }

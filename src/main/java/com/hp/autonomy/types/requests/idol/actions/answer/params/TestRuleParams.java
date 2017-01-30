@@ -7,23 +7,13 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum TestRuleParams {
-    Questions("questions"),
-    Rule("rule"),
-    SystemName("system_name");
-
-    private final String value;
-
-    TestRuleParams(final String v) {
-        value = v;
-    }
-
-    public String value() {
-        return value;
-    }
+    Questions,
+    Rule,
+    SystemName;
 
     public static TestRuleParams fromValue(final String value) {
         for (final TestRuleParams param : values()) {
-            if (param.value().equalsIgnoreCase(value)) {
+            if (param.name().equalsIgnoreCase(value)) {
                 return param;
             }
         }

@@ -6,27 +6,17 @@ package com.hp.autonomy.types.requests.idol.actions.answer;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum AnswerServerActions {
-    Ask("ask"),
-    GetJobStatus("get_job_status"),
-    GetResources("get_resources"),
-    GetStats("get_stats"),
-    GetStatus("getStatus"),
-    ManageResources("manage_resources"),
-    TestRule("test_rule");
-
-    private final String value;
-
-    AnswerServerActions(final String v) {
-        value = v;
-    }
-
-    public String value() {
-        return value;
-    }
+    Ask,
+    GetJobStatus,
+    GetResources,
+    GetStats,
+    GetStatus,
+    ManageResources,
+    TestRule;
 
     public static AnswerServerActions fromValue(final String value) {
         for (final AnswerServerActions action : values()) {
-            if (action.value().equalsIgnoreCase(value)) {
+            if (action.name().equalsIgnoreCase(value)) {
                 return action;
             }
         }
