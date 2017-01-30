@@ -7,12 +7,22 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum GetJobStatusParams {
-    JobTokens,
-    SystemName;
+    JobTokens("job_tokens"),
+    SystemName("system_name");
+
+    private final String value;
+
+    GetJobStatusParams(final String v) {
+        value = v;
+    }
+
+    public String value() {
+        return value;
+    }
 
     public static GetJobStatusParams fromValue(final String value) {
         for (final GetJobStatusParams param : values()) {
-            if (param.name().equalsIgnoreCase(value)) {
+            if (param.value().equalsIgnoreCase(value)) {
                 return param;
             }
         }

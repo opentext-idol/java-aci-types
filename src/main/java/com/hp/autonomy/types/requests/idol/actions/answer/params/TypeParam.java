@@ -21,7 +21,7 @@ public enum TypeParam {
 
     public static TypeParam fromValue(final String value) {
         for(final TypeParam param : values()) {
-            if(param.name().equalsIgnoreCase(value)) {
+            if(param.value().equalsIgnoreCase(value)) {
                 return param;
             }
         }

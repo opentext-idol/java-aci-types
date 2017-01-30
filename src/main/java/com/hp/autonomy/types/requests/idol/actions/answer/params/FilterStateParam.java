@@ -10,12 +10,12 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
  */
 @SuppressWarnings("unused")
 public enum FilterStateParam {
-    INCOMING("Incoming"),
-    ANSWERABLE("Answerable"),
-    NEEDS_ANSWER("NeedsAnswer"),
-    ANSWERED("Answered"),
-    REJECTED("Rejected"),
-    PUBLISHED("Published");
+    INCOMING("incoming"),
+    ANSWERABLE("answerable"),
+    NEEDS_ANSWER("needs_answer"),
+    ANSWERED("answered"),
+    REJECTED("rejected"),
+    PUBLISHED("published");
 
     private final String value;
 
