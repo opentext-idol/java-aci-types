@@ -8,7 +8,7 @@ package com.hp.autonomy.types.requests.idol.actions.connector.params;
 public enum ConnectorViewParams {
     Config,
     // only works for Distributed Connector
-    Group,
+    Autn_Group,
     Identifier,
     NoACI
 }
