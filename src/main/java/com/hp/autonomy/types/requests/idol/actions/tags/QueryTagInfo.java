@@ -20,11 +20,17 @@ public class QueryTagInfo implements Serializable {
     private static final long serialVersionUID = 7511499868253213698L;
     private final String id;
     private final String name;
+    private final Integer totalValues;
     private final Set<QueryTagCountInfo> values;
 
     public QueryTagInfo(final TagName tagName, final Set<QueryTagCountInfo> values) {
+        this(tagName, values, null);
+    }
+
+    public QueryTagInfo(final TagName tagName, final Set<QueryTagCountInfo> values, final Integer totalValues) {
         id = tagName.getId();
         name = tagName.getName();
         this.values = new LinkedHashSet<>(values);
+        this.totalValues = totalValues;
     }
 }
