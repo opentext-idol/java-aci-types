@@ -9,9 +9,9 @@ import java.io.Serializable;
 
 @SuppressWarnings({"WeakerAccess", "ComparableImplementedButEqualsNotOverridden"})
 public interface TagName extends Serializable, Comparable<TagName> {
-    String getId();
+    FieldPath getId();
 
-    String getName();
+    String getDisplayName();
 
     @Override
     default int compareTo(final TagName other) {

@@ -6,21 +6,20 @@
 package com.hp.autonomy.types.requests.idol.actions.tags;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.io.Serializable;
 
 /**
  * Value/Count information for a single element in a simple QueryTagResponse
  */
+@SuppressWarnings("WeakerAccess")
 @Data
+@RequiredArgsConstructor
 public class QueryTagCountInfo implements Serializable {
     private static final long serialVersionUID = 1036897651028995652L;
 
     private final String value;
+    private final String displayValue;
     private final int count;
-
-    public QueryTagCountInfo(final String value, final int count) {
-        this.count = count;
-        this.value = value;
-    }
 }
