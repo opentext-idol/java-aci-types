@@ -7,6 +7,7 @@ package com.hp.autonomy.types.requests.idol.actions.tags.params;
 
 public enum GetQueryTagValuesParams {
     AllowNonParametricFields,
+    CustomWeight,
     DateOffset,
     DatePeriod,
     DocumentCount,
@@ -15,13 +16,16 @@ public enum GetQueryTagValuesParams {
     FieldName,
     MaxValues,
     Merge,
+    Predict,
     Ranges,
     RestrictedValues,
     Sort,
     Start,
     Synchronous,
     TotalValues,
-    ValueDetails;
+    ValueDetails,
+    ValuePercentiles,
+    ValueRestriction;
 
     public static GetQueryTagValuesParams fromValue(final String value) {
         for (final GetQueryTagValuesParams param : values()) {

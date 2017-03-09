@@ -5,62 +5,36 @@
 
 package com.hp.autonomy.types.requests.idol.actions.tags;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
-import org.apache.commons.collections4.ListUtils;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Singular;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
-@Getter
-@EqualsAndHashCode
+@Data
+@Builder(toBuilder = true)
 public class RangeInfo implements Serializable {
     private static final long serialVersionUID = -850842200269239270L;
 
     private final String id;
-    private final String name;
+    private final String displayName;
     private final int count;
     private final double min;
     private final double max;
     private final double bucketSize;
+    @Singular
     private final List<Value> values;
 
-    @SuppressWarnings("ConstructorWithTooManyParameters")
-    public RangeInfo(final TagName tagName,
-                     final int count,
-                     final double min,
-                     final double max,
-                     final double bucketSize,
-                     final List<Value> values) {
-        id = tagName.getId();
-        name = tagName.getName();
-        this.count = count;
-        this.max = max;
-        this.min = min;
-        this.bucketSize = bucketSize;
-        this.values = new ArrayList<>(ListUtils.emptyIfNull(values));
-    }
-
-    @EqualsAndHashCode
-    @ToString
-    @Getter
+    @Data
+    @AllArgsConstructor
     public static class Value implements Serializable {
         private static final long serialVersionUID = 1433973915302512819L;
-
-        private int count;
         private final double min;
         private final double max;
-
-        public Value(final int count,
-                     final double min,
-                     final double max) {
-            this.count = count;
-            this.min = min;
-            this.max = max;
-        }
+        private int count;
 
         public void addData(final int count) {
             this.count += count;

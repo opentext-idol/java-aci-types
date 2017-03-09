@@ -5,32 +5,24 @@
 
 package com.hp.autonomy.types.requests.idol.actions.tags;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.Singular;
 
 import java.io.Serializable;
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
  * Value/Count information for a single element in a simple QueryTagResponse
  */
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "WeakerAccess"})
 @Data
+@Builder(toBuilder = true)
 public class QueryTagInfo implements Serializable {
     private static final long serialVersionUID = 7511499868253213698L;
     private final String id;
-    private final String name;
+    private final String displayName;
     private final Integer totalValues;
+    @Singular
     private final Set<QueryTagCountInfo> values;
-
-    public QueryTagInfo(final TagName tagName, final Set<QueryTagCountInfo> values) {
-        this(tagName, values, null);
-    }
-
-    public QueryTagInfo(final TagName tagName, final Set<QueryTagCountInfo> values, final Integer totalValues) {
-        id = tagName.getId();
-        name = tagName.getName();
-        this.values = new LinkedHashSet<>(values);
-        this.totalValues = totalValues;
-    }
 }
