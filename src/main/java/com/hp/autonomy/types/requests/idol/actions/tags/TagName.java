@@ -7,9 +7,14 @@ package com.hp.autonomy.types.requests.idol.actions.tags;
 
 import java.io.Serializable;
 
-@SuppressWarnings("WeakerAccess")
-public interface TagName extends Serializable {
-    String getId();
+@SuppressWarnings({"WeakerAccess", "ComparableImplementedButEqualsNotOverridden"})
+public interface TagName extends Serializable, Comparable<TagName> {
+    FieldPath getId();
 
-    String getName();
+    String getDisplayName();
+
+    @Override
+    default int compareTo(final TagName other) {
+        return getId().compareTo(other.getId());
+    }
 }
