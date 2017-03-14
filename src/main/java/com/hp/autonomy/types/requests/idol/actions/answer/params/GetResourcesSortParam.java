@@ -9,6 +9,7 @@ package com.hp.autonomy.types.requests.idol.actions.answer.params;
 public enum GetResourcesSortParam {
     ID("id"),
     CREATED_TIME("created_time"),
+    INCONGRUITY("incongruity"),
     LIKELIHOOD("likelihood"),
     METADATA("metadata"),
     MODIFIED_TIME("modified_time"),
