@@ -1,3 +1,8 @@
+/*
+ * Copyright 2017 Hewlett Packard Enterprise Development Company, L.P.
+ * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
+ */
+
 package com.hp.autonomy.types.requests.idol.actions.tags;
 
 import lombok.Builder;
@@ -20,6 +25,5 @@ public class DateValueDetails implements ValueDetails<ZonedDateTime> {
     private final double sum;
     private final int totalValues;
 
-    public static class DateValueDetailsBuilder implements ValueDetailsBuilder<ZonedDateTime, DateValueDetails, DateValueDetailsBuilder> {
-    }
+    public static class DateValueDetailsBuilder implements ValueDetailsBuilder<ZonedDateTime, DateValueDetails, DateValueDetailsBuilder> {}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Hewlett-Packard Development Company, L.P.
+ * Copyright 2017 Hewlett Packard Enterprise Development Company, L.P.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
  */
 
@@ -48,6 +48,5 @@ public class NumericRangeInfo implements RangeInfo<Double, Double, NumericRangeI
         }
     }
 
-    public static class NumericRangeInfoBuilder implements RangeInfoBuilder<Double, Double, NumericRangeInfo.Value, NumericRangeInfo, NumericRangeInfoBuilder> {
-    }
+    public static class NumericRangeInfoBuilder implements RangeInfoBuilder<Double, Double, NumericRangeInfo.Value, NumericRangeInfo, NumericRangeInfoBuilder> {}
 }

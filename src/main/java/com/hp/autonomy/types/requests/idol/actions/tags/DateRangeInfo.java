@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Hewlett-Packard Development Company, L.P.
+ * Copyright 2017 Hewlett Packard Enterprise Development Company, L.P.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
  */
 
@@ -50,6 +50,5 @@ public class DateRangeInfo implements RangeInfo<ZonedDateTime, Duration, DateRan
         }
     }
 
-    public static class DateRangeInfoBuilder implements RangeInfoBuilder<ZonedDateTime, Duration, DateRangeInfo.Value, DateRangeInfo, DateRangeInfoBuilder> {
-    }
+    public static class DateRangeInfoBuilder implements RangeInfoBuilder<ZonedDateTime, Duration, DateRangeInfo.Value, DateRangeInfo, DateRangeInfoBuilder> {}
 }
