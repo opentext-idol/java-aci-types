@@ -1,12 +1,12 @@
 /*
- * Copyright 2015-2016 Hewlett-Packard Development Company, L.P.
+ * Copyright 2015-2017 Hewlett Packard Enterprise Development Company, L.P.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
  */
 
 package com.hp.autonomy.types.requests.idol.actions.query.params;
 
 /**
- * Parameters for content
+ * Parameters for Content
  */
 public enum QueryParams {
     AbsWeight,
@@ -109,8 +109,8 @@ public enum QueryParams {
     XMLMeta;
 
     public static QueryParams fromValue(final String value) {
-        for (final QueryParams queryParam : values()) {
-            if (queryParam.name().equalsIgnoreCase(value)) {
+        for(final QueryParams queryParam : values()) {
+            if(queryParam.name().equalsIgnoreCase(value)) {
                 return queryParam;
             }
         }
