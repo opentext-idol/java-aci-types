@@ -12,10 +12,12 @@
 
     <groupId>com.hp.autonomy.frontend</groupId>
     <artifactId>aci-types</artifactId>
-    <version>0.20.0</version>
+    <version>0.21.0-SNAPSHOT</version>
 
     <name>Java ACI Types</name>
-    <description>Java Client for simple Java types and interfaces common to both Haven-on-Demand and On-Premise Applications</description>
+    <description>Java Client for simple Java types and interfaces common to both Haven-on-Demand and On-Premise
+        Applications
+    </description>
     <url>https://github.com/hpautonomy/java-aci-types</url>
     <licenses>
         <license>
