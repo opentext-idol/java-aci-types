@@ -1,43 +1,28 @@
 /*
- * Copyright 2015 Hewlett-Packard Development Company, L.P.
+ * Copyright 2016-2017 Hewlett Packard Enterprise Development Company, L.P.
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
  */
 
 package com.hp.autonomy.types.requests.idol.actions.tags;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Singular;
-
 import java.io.Serializable;
 import java.util.List;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
-@Data
-@Builder(toBuilder = true)
-public class RangeInfo implements Serializable {
-    private static final long serialVersionUID = -850842200269239270L;
+public interface RangeInfo<T extends Comparable<? super T> & Serializable, D extends Comparable<D> & Serializable, V extends RangeInfoValue<T, D>, R extends RangeInfo<T, D, V, R, B>, B extends RangeInfoBuilder<T, D, V, R, B>> extends Serializable {
+    String getId();
 
-    private final String id;
-    private final String displayName;
-    private final int count;
-    private final double min;
-    private final double max;
-    private final double bucketSize;
-    @Singular
-    private final List<Value> values;
+    String getDisplayName();
 
-    @Data
-    @AllArgsConstructor
-    public static class Value implements Serializable {
-        private static final long serialVersionUID = 1433973915302512819L;
-        private final double min;
-        private final double max;
-        private int count;
+    int getCount();
 
-        public void addData(final int count) {
-            this.count += count;
-        }
-    }
+    T getMin();
+
+    T getMax();
+
+    D getBucketSize();
+
+    List<V> getValues();
+
+    B toBuilder();
 }
