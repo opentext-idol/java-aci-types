@@ -9,6 +9,8 @@ public enum ConnectorViewParams {
     Config,
     // only works for Distributed Connector
     Autn_Group,
+    // only works for Distributed Connector
+    AnyLanguage,
     Identifier,
     NoACI
 }
