@@ -7,6 +7,7 @@ package com.hp.autonomy.types.requests.idol.actions.answer;
 @SuppressWarnings({"WeakerAccess", "unused"})
 public enum AnswerServerActions {
     Ask,
+    Converse,
     GetJobStatus,
     GetResources,
     GetStats,
