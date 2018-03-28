@@ -83,12 +83,12 @@ public class Documents<T extends Serializable> implements Serializable {
     }
 
     public Documents(
-            @JsonProperty("documents") final List<T> documents,
-            @JsonProperty("totalhits") final Integer totalResults,
-            @JsonProperty("expandedQuery") final String expandedQuery,
-            @JsonProperty("suggestion") final Spelling suggestion,
-            @JsonProperty("auto_correction") final Spelling autoCorrection,
-            @JsonProperty("warnings") final Warnings warnings
+        final List<T> documents,
+        final Integer totalResults,
+        final String expandedQuery,
+        final Spelling suggestion,
+        final Spelling autoCorrection,
+        final Warnings warnings
     ) {
         this(documents, totalResults, expandedQuery, suggestion, autoCorrection, warnings, null);
     }
