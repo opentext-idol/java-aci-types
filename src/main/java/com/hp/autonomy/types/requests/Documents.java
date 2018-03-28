@@ -57,6 +57,11 @@ public class Documents<T extends Serializable> implements Serializable {
      */
     private final Warnings warnings;
 
+    /**
+     * @serial List of expansion rules applicable to the type, may be null.
+     */
+    private final List<ExpansionRule> expansionOrder;
+
     // We can't use a builder here because Jackson doesn't support Builders with generic types
     // https://github.com/FasterXML/jackson-databind/issues/921
     public Documents(
@@ -65,7 +70,8 @@ public class Documents<T extends Serializable> implements Serializable {
         @JsonProperty("expandedQuery") final String expandedQuery,
         @JsonProperty("suggestion") final Spelling suggestion,
         @JsonProperty("auto_correction") final Spelling autoCorrection,
-        @JsonProperty("warnings") final Warnings warnings
+        @JsonProperty("warnings") final Warnings warnings,
+        @JsonProperty("expansionOrder") final List<ExpansionRule> expansionOrder
     ) {
         this.documents = new ArrayList<>(documents);
         this.totalResults = totalResults;
@@ -73,5 +79,17 @@ public class Documents<T extends Serializable> implements Serializable {
         this.suggestion = suggestion;
         this.autoCorrection = autoCorrection;
         this.warnings = warnings;
+        this.expansionOrder = expansionOrder;
+    }
+
+    public Documents(
+            @JsonProperty("documents") final List<T> documents,
+            @JsonProperty("totalhits") final Integer totalResults,
+            @JsonProperty("expandedQuery") final String expandedQuery,
+            @JsonProperty("suggestion") final Spelling suggestion,
+            @JsonProperty("auto_correction") final Spelling autoCorrection,
+            @JsonProperty("warnings") final Warnings warnings
+    ) {
+        this(documents, totalResults, expandedQuery, suggestion, autoCorrection, warnings, null);
     }
 }
