@@ -18,7 +18,7 @@
     <description>Java Client for simple Java types and interfaces common to both Haven-on-Demand and On-Premise
         Applications
     </description>
-    <url>https://github.com/hpautonomy/java-aci-types</url>
+    <url>https://github.com/microfocus-idol/java-aci-types</url>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -28,14 +28,14 @@
     <inceptionYear>2015</inceptionYear>
 
     <scm>
-        <connection>scm:git:git@github.com:hpautonomy/java-aci-types.git</connection>
-        <developerConnection>scm:git:git@github.com:hpautonomy/java-aci-types.git</developerConnection>
-        <url>git@github.com:hpautonomy/java-aci-types.git</url>
+        <connection>scm:git:git@github.com:microfocus-idol/java-aci-types.git</connection>
+        <developerConnection>scm:git:git@github.com:microfocus-idol/java-aci-types.git</developerConnection>
+        <url>git@github.com:microfocus-idol/java-aci-types.git</url>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/hpautonomy/java-aci-types/issues</url>
+        <url>https://github.com/microfocus-idol/java-aci-types/issues</url>
     </issueManagement>
 
     <developers>
