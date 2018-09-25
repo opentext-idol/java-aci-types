@@ -11,6 +11,7 @@ public enum TypeParam {
     QUESTION_EQUIVALENCE_CLASS("question_equivalence_class"),
     RULE_SUGGESTION("rule_suggestion"),
     SCHEMA("schema"),
+    SYNONYM("synonym"),
     XSD("xsd");
 
     private final String value;
