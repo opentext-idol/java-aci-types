@@ -8,6 +8,7 @@ package com.hp.autonomy.types.requests.idol.actions.answer;
 public enum AnswerServerActions {
     Ask,
     Converse,
+    Report,
     GetJobStatus,
     GetResources,
     GetStats,
