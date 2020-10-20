@@ -1,6 +1,15 @@
 /*
- * Copyright 2015-2017 Hewlett Packard Enterprise Development Company, L.P.
- * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License.
+ * (c) Copyright 2015-2017 Micro Focus or one of its affiliates.
+ *
+ * Licensed under the MIT License (the "License"); you may not use this file
+ * except in compliance with the License.
+ *
+ * The only warranties for products and services of Micro Focus and its affiliates
+ * and licensors ("Micro Focus") are as may be set forth in the express warranty
+ * statements accompanying such products and services. Nothing herein should be
+ * construed as constituting an additional warranty. Micro Focus shall not be
+ * liable for technical or editorial errors or omissions contained herein. The
+ * information contained herein is subject to change without notice.
  */
 
 package com.hp.autonomy.types.requests;
@@ -21,25 +30,25 @@ public class Documents<T extends Serializable> implements Serializable {
     private static final long serialVersionUID = 7657511117355673864L;
 
     /**
-     * @serial The list of documents returned by HP Haven OnDemand
+     * @serial The list of documents returned by Haven OnDemand
      */
     private final List<T> documents;
 
     /**
-     * @serial The total number of results found by HP Haven OnDemand. If the total_results parameter was not specified,
+     * @serial The total number of results found by Haven OnDemand. If the total_results parameter was not specified,
      * this will be null.
      */
     private final Integer totalResults;
 
     /**
-     * @serial The expanded query returned by HP Haven OnDemand. This will be null if no query profile was used.
+     * @serial The expanded query returned by Haven OnDemand. This will be null if no query profile was used.
      */
     private final String expandedQuery;
 
     /**
      * parameter is set to suggest.
      *
-     * @serial The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
+     * @serial The spelling suggestion returned by Haven OnDemand. This will only be returned if the check_spelling
      * parameter is set to suggest.
      */
     private final Spelling suggestion;
@@ -47,7 +56,7 @@ public class Documents<T extends Serializable> implements Serializable {
     /**
      * parameter is set to auto_correction.
      *
-     * @serial The spelling suggestion returned by HP Haven OnDemand. This will only be returned if the check_spelling
+     * @serial The spelling suggestion returned by Haven OnDemand. This will only be returned if the check_spelling
      * parameter is set to auto_correction.
      */
     private final Spelling autoCorrection;
