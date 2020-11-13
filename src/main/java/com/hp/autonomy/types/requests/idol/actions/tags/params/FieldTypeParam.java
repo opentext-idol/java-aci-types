@@ -1,5 +1,5 @@
 /*
- * (c) Copyright 2015-2016 Micro Focus or one of its affiliates.
+ * (c) Copyright 2015-2016, 2020 Micro Focus or one of its affiliates.
  *
  * Licensed under the MIT License (the "License"); you may not use this file
  * except in compliance with the License.
@@ -21,6 +21,7 @@ package com.hp.autonomy.types.requests.idol.actions.tags.params;
 public enum FieldTypeParam {
     ACL,
     All,
+    AlwaysMatch,
     AutnRank,
     BitField,
     DataBase,
@@ -29,6 +30,9 @@ public enum FieldTypeParam {
     ExpireDate,
     FieldCheck,
     FlattenIndex,
+    GeospatialUnified("geospatial (unified)"),
+    GeospatialX("geospatial (X/longitude)"),
+    GeospatialY("geospatial (Y/latitude)"),
     Highlight,
     Index,
     IndexWeight,
@@ -47,26 +51,50 @@ public enum FieldTypeParam {
     Synonym,
     Title;
 
-    public static FieldTypeParam fromValue(final String value) {
+    /**
+     * Additional optional ID used by IDOL for this field type.
+     */
+    private final String value;
+
+    FieldTypeParam(final String value) {
+        this.value = value;
+    }
+
+    FieldTypeParam() {
+        this(null);
+    }
+
+    /**
+     * Return type matching the IDOL value, or null.
+     */
+    private static FieldTypeParam maybeFromValue(final String value) {
         for (final FieldTypeParam param : values()) {
-            if (param.name().equalsIgnoreCase(value)) {
+            if (param.name().equalsIgnoreCase(value) ||
+                (param.value != null && param.value.equalsIgnoreCase(value))
+            ) {
                 return param;
             }
         }
 
-        throw new IllegalArgumentException("Unknown query param " + value);
+        return null;
     }
 
-    public static FieldTypeParam fromValue(final String value, final FieldTypeParam defaultValue) {
-        FieldTypeParam match = defaultValue;
-
-        for (final FieldTypeParam param : values()) {
-            if (param.name().equalsIgnoreCase(value)) {
-                match = param;
-                break;
-            }
+    /**
+     * Return type matching the IDOL value, or throw {@link IllegalArgumentException}.
+     */
+    public static FieldTypeParam fromValue(final String value) {
+        final FieldTypeParam match = maybeFromValue(value);
+        if (match == null) {
+            throw new IllegalArgumentException("Unknown query param " + value);
         }
-
         return match;
+    }
+
+    /**
+     * Return type matching the IDOL value, or return the provided default value.
+     */
+    public static FieldTypeParam fromValue(final String value, final FieldTypeParam defaultValue) {
+        final FieldTypeParam match = maybeFromValue(value);
+        return match == null ? defaultValue : match;
     }
 }
