@@ -23,6 +23,7 @@ public enum QmsQueryParams {
     CookerContext,
     CookRequest,
     ExpandQuery,
+    ExplicitProfiling,
     IntentRankedQuery,
     IRQCorpusSize,
     Promotions,

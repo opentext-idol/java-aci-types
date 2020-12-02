@@ -24,6 +24,7 @@ public enum UserActions {
     UserDelete,
     UserEdit,
     UserExist,
+    UserGetAllFieldNames,
     UserLock,
     UserPin,
     UserRead,
